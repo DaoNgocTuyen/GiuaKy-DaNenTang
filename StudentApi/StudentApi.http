@@ -1,0 +1,6 @@
+@StudentApi_HostAddress = https://localhost:7030
+
+GET {{StudentApi_HostAddress}}/firebase-test
+Accept: application/json
+
+###

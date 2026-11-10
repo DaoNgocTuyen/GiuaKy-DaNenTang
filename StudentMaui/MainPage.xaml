@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StudentMaui.MainPage"
+    Title="Hồ sơ người dùng">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+
+            <Label
+                Text="Hồ sơ người dùng"
+                FontSize="26"
+                FontAttributes="Bold" />
+
+            <Label
+                x:Name="StatusLabel"
+                TextColor="DarkRed"
+                LineBreakMode="WordWrap" />
+
+            <VerticalStackLayout
+                x:Name="LoginPanel"
+                Spacing="12">
+
+                <Entry
+                    x:Name="EmailEntry"
+                    Placeholder="Email"
+                    Keyboard="Email" />
+
+                <Entry
+                    x:Name="PasswordEntry"
+                    Placeholder="Mật khẩu"
+                    IsPassword="True" />
+
+                <Button
+                    Text="Đăng nhập"
+                    Clicked="OnLoginClicked" />
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                x:Name="ProfilePanel"
+                IsVisible="False"
+                Spacing="16">
+
+                <Image
+                    x:Name="AvatarImage"
+                    HeightRequest="200"
+                    WidthRequest="200"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center" />
+
+                <Label
+                    x:Name="NameLabel"
+                    FontSize="24"
+                    FontAttributes="Bold" />
+
+                <Label x:Name="EmailLabel" />
+
+                <Button
+                    Text="Chọn ảnh đại diện"
+                    Clicked="OnPickPhotoClicked" />
+
+                <Button
+                    Text="Chụp ảnh đại diện"
+                    Clicked="OnCapturePhotoClicked" />
+
+                <Button
+                    Text="Tải lại hồ sơ"
+                    Clicked="OnReloadClicked" />
+
+                <Button
+                    Text="Đăng xuất"
+                    Clicked="OnLogoutClicked" />
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

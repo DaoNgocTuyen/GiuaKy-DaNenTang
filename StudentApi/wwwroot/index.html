@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#174e40">
+    <title>Nội Bộ — Quản lý người dùng</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css?v=6">
+</head>
+<body>
+    <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+            <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.87M15 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></symbol>
+            <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+            <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+            <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+            <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+            <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M6.1 7a7 7 0 0 1 11.6-2L20 8M4 16l2.3 3A7 7 0 0 0 18 17"/></symbol>
+            <symbol id="i-edit" viewBox="0 0 24 24"><path d="m16 3 5 5-12 12-6 1 1-6L16 3Zm-2 2 5 5"/></symbol>
+            <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></symbol>
+            <symbol id="i-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m21 16-6-6L4 21"/></symbol>
+            <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 16v5h16v-5"/></symbol>
+            <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4m-4 5v2"/></symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></symbol>
+            <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+            <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+            <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2-3 4m.1 3h.01"/></symbol>
+            <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H4v16h5m5-13 5 5-5 5m-6-5h11"/></symbol>
+            <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+            <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3Zm0 6v5m0 3h.01"/></symbol>
+        </defs>
+    </svg>
+
+    <section id="loginSection" class="login-layout" aria-label="Đăng nhập quản trị">
+        <aside class="login-story">
+            <a class="brand brand-light" href="/" aria-label="Nội Bộ — trang chủ"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>Nội Bộ<span class="brand-caption">QUẢN LÝ NGƯỜI DÙNG</span></span></a>
+            <div class="story-content">
+                <span class="eyebrow light-eyebrow"><span class="tiny-dot"></span> KHÔNG GIAN QUẢN TRỊ</span>
+                <h1>Một nơi cho<br>mọi <span>hồ sơ.</span></h1>
+                <p>Quản lý thông tin người dùng rõ ràng,<br class="desktop-break"> ngăn nắp và dễ dàng hơn mỗi ngày.</p>
+                <div class="story-illustration" aria-hidden="true">
+                    <div class="illustration-heading"><span class="illustration-icon"><svg class="icon"><use href="#i-users"/></svg></span><div><strong>Đội ngũ của bạn</strong><span>Mọi hồ sơ, trong một không gian</span></div><span class="illustration-more">···</span></div>
+                    <div class="illustration-row"><span class="illustration-avatar tone-peach">A</span><div class="illustration-lines"><i></i><i></i></div><span class="illustration-check"><svg class="icon"><use href="#i-check"/></svg></span></div>
+                    <div class="illustration-row"><span class="illustration-avatar tone-lavender">M</span><div class="illustration-lines"><i></i><i></i></div><span class="illustration-check"><svg class="icon"><use href="#i-check"/></svg></span></div>
+                    <div class="illustration-row"><span class="illustration-avatar tone-mint">T</span><div class="illustration-lines"><i></i><i></i></div><span class="illustration-check"><svg class="icon"><use href="#i-check"/></svg></span></div>
+                    <div class="illustration-note"><span class="note-spark">✦</span> Gọn gàng từ những điều nhỏ nhất.</div>
+                </div>
+            </div>
+            <div class="story-footer"><span>Nội Bộ Workspace</span><span>Đơn giản. Có tổ chức.</span></div>
+        </aside>
+        <div class="login-main">
+            <button type="button" class="help-link" data-help><svg class="icon"><use href="#i-help"/></svg> Cần trợ giúp?</button>
+            <div class="login-card">
+                <span class="login-symbol"><svg class="icon"><use href="#i-lock"/></svg></span>
+                <p class="eyebrow">CHÀO MỪNG TRỞ LẠI</p>
+                <h2>Đăng nhập quản trị</h2>
+                <p class="muted login-description">Tiếp tục quản lý và chăm chút từng hồ sơ.</p>
+                <div id="loginMessage" class="notice" role="status" aria-live="polite" hidden></div>
+                <form id="loginForm">
+                    <label class="field-label" for="loginEmail">Email quản trị</label>
+                    <div class="input-shell"><svg class="icon"><use href="#i-mail"/></svg><input id="loginEmail" type="email" placeholder="ban@example.com" autocomplete="username" maxlength="254" required></div>
+                    <label class="field-label" for="loginPassword">Mật khẩu</label>
+                    <div class="input-shell"><svg class="icon"><use href="#i-lock"/></svg><input id="loginPassword" type="password" placeholder="Nhập mật khẩu của bạn" autocomplete="current-password" required><button class="eye-button" type="button" data-password="loginPassword" aria-label="Hiện mật khẩu" aria-pressed="false"><svg class="icon"><use href="#i-eye"/></svg></button></div>
+                    <button id="loginButton" type="submit" class="button primary login-submit" data-busy-lock><span>Đăng nhập</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+                </form>
+                <p class="login-security"><svg class="icon"><use href="#i-lock"/></svg> Chỉ dành cho tài khoản có quyền quản trị.</p>
+            </div>
+            <p class="login-bottom">Một không gian làm việc ngăn nắp hơn.</p>
+        </div>
+    </section>
+
+    <div id="adminSection" class="workspace" hidden>
+        <aside class="sidebar">
+            <a class="brand" href="/" aria-label="Nội Bộ — trang chủ"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>Nội Bộ<span class="brand-caption">ADMIN WORKSPACE</span></span></a>
+            <p class="nav-label">KHÔNG GIAN LÀM VIỆC</p>
+            <nav aria-label="Điều hướng chính"><a class="nav-item active" href="#users" aria-current="page"><svg class="icon"><use href="#i-users"/></svg> Người dùng <span id="navCount" class="nav-count">0</span></a></nav>
+            <div class="sidebar-account"><span id="accountAvatar" class="account-avatar">QT</span><div class="account-info"><strong>Quản trị viên</strong><span id="accountEmail"></span></div><button id="logoutButton" type="button" class="icon-button" aria-label="Đăng xuất" title="Đăng xuất" data-busy-lock><svg class="icon"><use href="#i-logout"/></svg></button></div>
+        </aside>
+        <div class="workspace-body">
+            <header class="topbar"><div class="breadcrumb">Không gian làm việc <svg class="icon"><use href="#i-chevron"/></svg><strong>Người dùng</strong></div><span class="admin-badge"><span class="tiny-dot"></span> Phiên quản trị</span></header>
+            <main id="users" class="dashboard">
+                <div class="page-heading"><div><p class="eyebrow">QUẢN LÝ TÀI KHOẢN</p><h1>Người dùng<span class="heading-dot">.</span></h1><p class="muted">Tất cả hồ sơ, được sắp xếp theo cách của bạn.</p></div><button id="addButton" class="button primary" type="button" data-busy-lock><svg class="icon"><use href="#i-plus"/></svg> Thêm người dùng</button></div>
+                <div class="stat-grid" aria-label="Thống kê hồ sơ">
+                    <article class="stat-card"><div><p>Tổng người dùng</p><strong id="totalUsers">0</strong><span>Tài khoản trong danh sách</span></div><span class="stat-icon green"><svg class="icon"><use href="#i-users"/></svg></span></article>
+                    <article class="stat-card"><div><p>Có ảnh đại diện</p><strong id="usersWithPhoto">0</strong><span>Hồ sơ đã cập nhật ảnh</span></div><span class="stat-icon purple"><svg class="icon"><use href="#i-photo"/></svg></span></article>
+                    <article class="stat-card"><div><p>Chưa có ảnh</p><strong id="usersWithoutPhoto">0</strong><span>Cần bổ sung ảnh đại diện</span></div><span class="stat-icon amber"><svg class="icon"><use href="#i-upload"/></svg></span></article>
+                </div>
+                <section class="directory" aria-labelledby="directoryTitle">
+                    <div class="directory-heading"><div><h2 id="directoryTitle">Danh sách người dùng <span id="directoryCount" class="count-badge">0</span></h2><p id="lastUpdated" class="muted">Thông tin hồ sơ của không gian làm việc</p></div><button id="reloadButton" class="button secondary" type="button" data-busy-lock><svg class="icon"><use href="#i-refresh"/></svg><span>Tải lại</span></button></div>
+                    <div class="table-toolbar"><div class="input-shell search-shell"><svg class="icon"><use href="#i-search"/></svg><input id="search" type="search" placeholder="Tìm theo tên hoặc email..." aria-label="Tìm người dùng"></div><div class="table-filters"><select id="photoFilter" aria-label="Lọc theo ảnh đại diện"><option value="all">Tất cả hồ sơ</option><option value="with">Có ảnh đại diện</option><option value="without">Chưa có ảnh</option></select><select id="sortOrder" aria-label="Sắp xếp người dùng"><option value="name-asc">Tên: A đến Z</option><option value="name-desc">Tên: Z đến A</option><option value="email-asc">Email: A đến Z</option></select></div></div>
+                    <div class="table-wrap"><table><thead><tr><th scope="col">NGƯỜI DÙNG</th><th scope="col">EMAIL</th><th scope="col">MÃ TÀI KHOẢN</th><th scope="col">ẢNH HỒ SƠ</th><th scope="col" class="actions-heading">THAO TÁC</th></tr></thead><tbody id="rows"></tbody></table></div>
+                    <div id="emptyState" class="empty-state" hidden><span class="empty-icon"><svg class="icon"><use href="#i-users"/></svg></span><h3 id="emptyTitle">Chưa có người dùng</h3><p id="emptyDescription">Thêm người dùng đầu tiên để bắt đầu quản lý hồ sơ.</p><button id="emptyAction" class="button secondary" type="button" data-busy-lock>Thêm người dùng đầu tiên</button></div>
+                    <div class="table-footer"><p id="count" aria-live="polite">Chưa có dữ liệu</p><div class="pagination"><button id="previousPage" class="icon-button" type="button" aria-label="Trang trước" disabled><svg class="icon rotate"><use href="#i-chevron"/></svg></button><span id="pageLabel">Trang 1 / 1</span><button id="nextPage" class="icon-button" type="button" aria-label="Trang sau" disabled><svg class="icon"><use href="#i-chevron"/></svg></button></div></div>
+                </section>
+                <footer class="dashboard-footer"><span>Nội Bộ <span class="footer-divider">/</span> Quản lý người dùng</span><span>Gọn gàng hơn, mỗi ngày.</span></footer>
+            </main>
+        </div>
+    </div>
+
+    <div id="message" class="toast notice" role="status" aria-live="polite" hidden></div>
+
+    <dialog id="userDialog" class="dialog" aria-labelledby="formTitle">
+        <div class="dialog-header"><div><p class="eyebrow">THÔNG TIN TÀI KHOẢN</p><h2 id="formTitle">Thêm người dùng</h2></div><button id="closeUserDialog" type="button" class="icon-button" aria-label="Đóng biểu mẫu" data-busy-lock><svg class="icon"><use href="#i-close"/></svg></button></div>
+        <p id="formDescription" class="dialog-description muted">Tạo tài khoản và hoàn thiện hồ sơ người dùng mới.</p>
+        <div id="formMessage" class="notice" role="alert" hidden></div>
+        <form id="userForm">
+            <span class="field-label">Ảnh đại diện <span class="required">*</span></span>
+            <label class="photo-upload" for="photo"><span class="photo-preview"><svg id="photoPlaceholder" class="icon"><use href="#i-photo"/></svg><img id="preview" alt="Ảnh đại diện xem trước" hidden></span><span class="photo-copy"><strong id="photoLabel">Chọn ảnh đại diện</strong><span>JPEG hoặc PNG. Ảnh sẽ được tự động thu nhỏ.</span><span class="upload-link"><svg class="icon"><use href="#i-upload"/></svg> Chọn ảnh từ thiết bị</span></span><input id="photo" type="file" accept="image/jpeg,image/png" aria-label="Chọn ảnh đại diện" data-busy-lock></label>
+            <label class="field-label" for="hoTen">Họ và tên <span class="required">*</span></label><input id="hoTen" class="text-input" placeholder="Ví dụ: Nguyễn Minh Anh" minlength="2" maxlength="100" autocomplete="off" required>
+            <label class="field-label" for="email">Địa chỉ email <span class="required">*</span></label><div class="input-shell"><svg class="icon"><use href="#i-mail"/></svg><input id="email" type="email" placeholder="nguoidung@example.com" maxlength="254" autocomplete="off" required></div>
+            <label class="field-label" for="password">Mật khẩu <span id="passwordRequired" class="required">*</span></label><div class="input-shell"><svg class="icon"><use href="#i-lock"/></svg><input id="password" type="password" placeholder="Ít nhất 6 ký tự" minlength="6" maxlength="128" autocomplete="new-password" required><button class="eye-button" type="button" data-password="password" aria-label="Hiện mật khẩu" aria-pressed="false"><svg class="icon"><use href="#i-eye"/></svg></button></div><p id="passwordHint" class="field-hint">Mật khẩu dùng để đăng nhập vào tài khoản.</p>
+            <div class="dialog-footer"><button id="cancelButton" type="button" class="button secondary" data-busy-lock>Hủy bỏ</button><button id="saveButton" type="submit" class="button primary" data-busy-lock><svg class="icon"><use href="#i-plus"/></svg><span id="saveLabel">Tạo người dùng</span></button></div>
+        </form>
+    </dialog>
+
+    <dialog id="deleteDialog" class="dialog confirm-dialog" aria-labelledby="deleteTitle"><span class="delete-symbol"><svg class="icon"><use href="#i-trash"/></svg></span><h2 id="deleteTitle">Xóa người dùng?</h2><p class="muted">Tài khoản và hồ sơ sẽ bị xóa. Thao tác này không thể hoàn tác.</p><div class="delete-person"><strong id="deleteName"></strong><span id="deleteEmail"></span></div><div id="deleteMessage" class="notice" role="alert" hidden></div><div class="dialog-footer"><button id="cancelDelete" class="button secondary" type="button" data-busy-lock>Giữ lại</button><button id="confirmDelete" class="button danger" type="button" data-busy-lock>Xóa người dùng</button></div></dialog>
+
+    <dialog id="helpDialog" class="dialog help-dialog" aria-labelledby="helpTitle"><div class="dialog-header"><div><p class="eyebrow">MỘT CHÚT HƯỚNG DẪN</p><h2 id="helpTitle">Bắt đầu cùng Nội Bộ</h2></div><button id="closeHelp" class="icon-button" type="button" aria-label="Đóng hướng dẫn"><svg class="icon"><use href="#i-close"/></svg></button></div><ol class="help-steps"><li><strong>Đăng nhập quản trị</strong><p>Sử dụng tài khoản đã được cấp quyền quản trị. Nếu chưa có quyền truy cập, hãy liên hệ người phụ trách tài khoản.</p></li><li><strong>Hoàn thiện hồ sơ</strong><p>Chọn “Thêm người dùng”, điền họ tên, email, mật khẩu và chọn ảnh đại diện.</p></li><li><strong>Tìm và cập nhật dễ dàng</strong><p>Tìm theo tên hoặc email, lọc hồ sơ theo ảnh. Khi sửa, để trống mật khẩu nếu muốn giữ mật khẩu hiện tại.</p></li></ol></dialog>
+    <noscript><div class="noscript-warning">Bạn cần bật JavaScript trong trình duyệt để đăng nhập và quản lý người dùng.</div></noscript>
+    <script src="/app.js?v=7" defer></script>
+</body>
+</html>

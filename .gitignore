@@ -1,0 +1,5 @@
+**/bin/
+**/obj/
+.vs/
+**/*-firebase.json
+**/*service-account*.json
